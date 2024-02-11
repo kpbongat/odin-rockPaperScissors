@@ -16,26 +16,27 @@ function getComputerChoice() {
     if (playerSelection === computerSelection) {
         return "It's a draw!";
     }
-    if (playerSelection === "rock" && computerSelection === "scissors") {
+    if (playerSelection === "rock" && computerSelection === "scissors" ||
+        playerSelection === "paper" && computerSelection === "rock" ||
+        playerSelection === "scissors" && computerSelection === "paper") {
+
         return "You win!";
     }
-    else if (playerSelection === "paper" && computerSelection === "rock") {
-        return "You win!";
-    }
-    else if (playerSelection === "scissors" && computerSelection === "paper") {
-        return "You win!";
-    }
+
     else {
         return "You lose."
     }
   }
 
-  function playGame() {
+  function playGame(numberOfRounds) {
+    while (numberOfRounds != 0) {
     playerSelection = prompt("Enter rock, paper, or scissors to play!");
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice();
-    
+
     console.log(playRound(playerSelection,computerSelection));
+    --numberOfRounds;
+    }
   }
 
-playGame()
+playGame(5)
