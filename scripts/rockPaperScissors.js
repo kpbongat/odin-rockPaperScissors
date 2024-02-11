@@ -40,6 +40,12 @@ function getComputerChoice() {
     console.log(playRound(playerSelection,computerSelection));
     --numberOfRounds;
     }
+    if (playerScore > computerScore) {
+        console.log(`You win with a score of ${playerScore}!`)
+    }
+    else {
+        console.log(`You lose with a score of ${playerScore}.`)
+    }
   }
 
 playGame(5)
