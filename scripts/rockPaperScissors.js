@@ -30,8 +30,6 @@ function getComputerChoice() {
   }
 
   function playGame(numberOfRounds) {
-    let playerScore = 0;
-    let computerScore = 0;
     while (numberOfRounds != 0) {
     playerSelection = prompt("Enter rock, paper, or scissors to play!");
     playerSelection = playerSelection.toLowerCase();
@@ -47,5 +45,8 @@ function getComputerChoice() {
         console.log(`You lose with a score of ${playerScore}.`)
     }
   }
+  
+let playerScore = 0;
+let computerScore = 0;
 
 playGame(5)
