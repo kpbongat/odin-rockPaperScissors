@@ -38,7 +38,10 @@ function getComputerChoice() {
     console.log(playRound(playerSelection,computerSelection));
     --numberOfRounds;
     }
-    if (playerScore > computerScore) {
+    if (playerScore === computerScore){
+        console.log(`It's a draw, ${playerScore} and ${computerScore}.`)
+    }
+    else if (playerScore > computerScore) {
         console.log(`You win with a score of ${playerScore} against ${computerScore}!`)
     }
     else {
