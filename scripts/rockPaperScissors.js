@@ -4,11 +4,11 @@ function getComputerChoice() {
     const randomNumber = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
     switch(randomNumber) {
         case 1:
-            return "Rock";
+            return "rock";
         case 2:
-            return "Paper";
+            return "paper";
         case 3:
-            return "Scissors";
+            return "scissors";
     }
   }
 
@@ -31,5 +31,6 @@ function getComputerChoice() {
   }
     
   playerSelection = prompt("Enter rock, paper, or scissors to play!");
+  playerSelection = playerSelection.toLowerCase();
   computerSelection = getComputerChoice();
   console.log(playRound(playerSelection, computerSelection));
