@@ -29,8 +29,13 @@ function getComputerChoice() {
         return "You lose."
     }
   }
+
+  function playGame() {
+    playerSelection = prompt("Enter rock, paper, or scissors to play!");
+    playerSelection = playerSelection.toLowerCase();
+    computerSelection = getComputerChoice();
     
-  playerSelection = prompt("Enter rock, paper, or scissors to play!");
-  playerSelection = playerSelection.toLowerCase();
-  computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+    console.log(playRound(playerSelection,computerSelection));
+  }
+
+playGame()
