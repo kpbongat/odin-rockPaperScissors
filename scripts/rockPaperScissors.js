@@ -19,16 +19,19 @@ function getComputerChoice() {
     if (playerSelection === "rock" && computerSelection === "scissors" ||
         playerSelection === "paper" && computerSelection === "rock" ||
         playerSelection === "scissors" && computerSelection === "paper") {
-
+        ++playerScore;
         return "You win!";
     }
 
     else {
+        ++computerScore;
         return "You lose."
     }
   }
 
   function playGame(numberOfRounds) {
+    let playerScore = 0;
+    let computerScore = 0;
     while (numberOfRounds != 0) {
     playerSelection = prompt("Enter rock, paper, or scissors to play!");
     playerSelection = playerSelection.toLowerCase();
