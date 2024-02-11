@@ -20,12 +20,12 @@ function getComputerChoice() {
         playerSelection === "paper" && computerSelection === "rock" ||
         playerSelection === "scissors" && computerSelection === "paper") {
         ++playerScore;
-        return "You win!";
+        return `You win, since ${playerSelection} beats ${computerSelection}!`;
     }
 
     else {
         ++computerScore;
-        return "You lose."
+        return `You lose, ${computerSelection} beats ${playerSelection}.`
     }
   }
 
@@ -39,13 +39,13 @@ function getComputerChoice() {
     --numberOfRounds;
     }
     if (playerScore > computerScore) {
-        console.log(`You win with a score of ${playerScore}!`)
+        console.log(`You win with a score of ${playerScore} against ${computerScore}!`)
     }
     else {
-        console.log(`You lose with a score of ${playerScore}.`)
+        console.log(`You lose with a score of ${playerScore} against ${computerScore}.`)
     }
   }
-  
+
 let playerScore = 0;
 let computerScore = 0;
 
