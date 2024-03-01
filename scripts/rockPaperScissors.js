@@ -34,6 +34,10 @@ function getComputerChoice() {
     const paperButton = document.querySelector('.paper');
     const scissorsButton = document.querySelector('.scissors');
 
+    rockButton.addEventListener('click',playRound('rock',computerSelection))
+    paperButton.addEventListener('click',playRound('paper',computerSelection))
+    scissorsButton.addEventListener('click',playRound('scissors',computerSelection))
+
     computerSelection = getComputerChoice();
 
     console.log(playRound(playerSelection,computerSelection));
