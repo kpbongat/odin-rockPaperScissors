@@ -29,15 +29,15 @@ function getComputerChoice() {
     }
   }
 
-  function playGame(numberOfRounds) {
-    while (numberOfRounds != 0) {
+  function playGame() {
+    
     playerSelection = prompt("Enter rock, paper, or scissors to play!");
     playerSelection = playerSelection.toLowerCase();
     computerSelection = getComputerChoice();
 
     console.log(playRound(playerSelection,computerSelection));
-    --numberOfRounds;
-    }
+
+    
     if (playerScore === computerScore){
         console.log(`It's a draw, ${playerScore} and ${computerScore}.`)
     }
@@ -47,9 +47,9 @@ function getComputerChoice() {
     else {
         console.log(`You lose with a score of ${playerScore} against ${computerScore}.`)
     }
-  }
+}
 
 let playerScore = 0;
 let computerScore = 0;
 
-playGame(5)
+playGame()
