@@ -36,9 +36,9 @@ function getComputerChoice() {
 
     computerSelection = getComputerChoice();
 
-    rockButton.addEventListener('click',playRound('rock',computerSelection));
-    paperButton.addEventListener('click',playRound('paper',computerSelection));
-    scissorsButton.addEventListener('click',playRound('scissors',computerSelection));
+    rockButton.addEventListener('click',playRound('rock',getComputerChoice()));
+    paperButton.addEventListener('click',playRound('paper',getComputerChoice()));
+    scissorsButton.addEventListener('click',playRound('scissors',getComputerChoice()));
 
     console.log(playRound(playerSelection,computerSelection));
 
