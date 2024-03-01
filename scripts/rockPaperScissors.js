@@ -61,8 +61,12 @@ function displayScore(){
         else {
             scoreMessage = ` You lose with a score of ${playerScore} against ${computerScore}.`;
         }
+        playerScore = 0;
+        computerScore = 0;
     }
-    scoreMessage = ` Player ${playerScore}: Computer ${computerScore}`;
+    else{
+        scoreMessage = ` Player ${playerScore}: Computer ${computerScore}`
+    };
 
     return scoreMessage;
 }
