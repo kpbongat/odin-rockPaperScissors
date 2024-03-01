@@ -33,17 +33,18 @@ function getComputerChoice() {
     const rockButton = document.querySelector('.rock');
     const paperButton = document.querySelector('.paper');
     const scissorsButton = document.querySelector('.scissors');
+    const resultDiv = document.querySelector('.result');
 
     computerSelection = getComputerChoice();
 
     rockButton.addEventListener('click', ()=>{
-        console.log(playRound('rock',computerSelection));
+        resultDiv.textContent = playRound('rock',computerSelection);
     });
     paperButton.addEventListener('click',()=>{
-        console.log(playRound('paper',computerSelection));
+        resultDiv.textContent = playRound('paper',computerSelection);
     });
     scissorsButton.addEventListener('click',()=>{
-        console.log(playRound('scissors',computerSelection));
+        resultDiv.textContent = playRound('scissors',computerSelection);
     });
 
     
