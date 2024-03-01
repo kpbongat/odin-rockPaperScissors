@@ -35,16 +35,15 @@ function getComputerChoice() {
     const scissorsButton = document.querySelector('.scissors');
     const resultDiv = document.querySelector('.result');
 
-    computerSelection = getComputerChoice();
-
+    
     rockButton.addEventListener('click', ()=>{
-        resultDiv.textContent = playRound('rock',computerSelection) + displayScore();
+        resultDiv.textContent = playRound('rock',getComputerChoice()) + displayScore();
     });
     paperButton.addEventListener('click',()=>{
-        resultDiv.textContent = playRound('paper',computerSelection) + displayScore();
+        resultDiv.textContent = playRound('paper',getComputerChoice()) + displayScore();
     });
     scissorsButton.addEventListener('click',()=>{
-        resultDiv.textContent = playRound('scissors',computerSelection) + displayScore();
+        resultDiv.textContent = playRound('scissors',getComputerChoice()) + displayScore();
     });
     
 }
