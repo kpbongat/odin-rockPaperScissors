@@ -36,11 +36,15 @@ function getComputerChoice() {
 
     computerSelection = getComputerChoice();
 
-    rockButton.addEventListener('click',playRound('rock',getComputerChoice()));
-    paperButton.addEventListener('click',playRound('paper',getComputerChoice()));
-    scissorsButton.addEventListener('click',playRound('scissors',getComputerChoice()));
-
-    console.log(playRound(playerSelection,computerSelection));
+    rockButton.addEventListener('click', ()=>{
+        console.log(playRound('rock',computerSelection));
+    });
+    paperButton.addEventListener('click',()=>{
+        console.log(playRound('paper',computerSelection));
+    });
+    scissorsButton.addEventListener('click',()=>{
+        console.log(playRound('scissors',computerSelection));
+    });
 
     
     if (playerScore === computerScore){
