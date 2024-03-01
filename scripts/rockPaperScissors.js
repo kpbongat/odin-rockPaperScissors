@@ -1,7 +1,7 @@
 function getComputerChoice() {
-    const minCeiled = Math.ceil(1);
-    const maxFloored = Math.floor(3);
-    const randomNumber = Math.floor(Math.random() * (maxFloored - minCeiled + 1) + minCeiled);
+    const minRange = 1;
+    const maxRange = 3;
+    const randomNumber = Math.floor(Math.random() * (maxRange - minRange + 1) + minRange);
     switch(randomNumber) {
         case 1:
             return "rock";
